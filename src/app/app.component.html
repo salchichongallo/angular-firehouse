@@ -11,12 +11,18 @@
 
   <article class="house" *ngIf="!!selectedLocation">
     <img [src]="selectedLocation.photo" />
-    <h2>{{selectedLocation.name}}</h2>
+    <h2>{{ selectedLocation.name }}</h2>
     <ul>
-      <li>{{selectedLocation.availableUnits}} Units available</li>
-      <li>{{selectedLocation.city}}, {{selectedLocation.state}}</li>
-      <li>{{selectedLocation.wifi ? 'Have Wi-Fi' : 'Does not have Wi-Fi'}}</li>
-      <li>{{selectedLocation.laundry ? 'Have laundry' : 'Does not have laundry'}}</li>
+      <li>{{ selectedLocation.availableUnits }} Units available</li>
+      <li>{{ selectedLocation.city }}, {{ selectedLocation.state }}</li>
+      <li>
+        {{ selectedLocation.wifi ? 'Have Wi-Fi' : 'Does not have Wi-Fi' }}
+      </li>
+      <li>
+        {{
+          selectedLocation.laundry ? 'Have laundry' : 'Does not have laundry'
+        }}
+      </li>
     </ul>
   </article>
 </main>

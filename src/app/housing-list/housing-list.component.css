@@ -36,10 +36,6 @@ button {
   cursor: pointer;
 }
 
-.results {
-
-}
-
 article {
   display: flex;
   align-items: center;
