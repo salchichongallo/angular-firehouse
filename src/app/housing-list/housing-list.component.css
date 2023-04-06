@@ -1,0 +1,51 @@
+input,
+button {
+  border: solid 1px lightgray;
+  border-radius: 4px;
+  display: inline-block;
+  height: 40px;
+}
+
+.search-bar {
+  margin: 1.5rem 0;
+}
+
+.search-bar__input {
+  display: flex;
+  gap: 0.5rem;
+}
+
+label {
+  margin-bottom: 4px;
+  display: block;
+  padding-left: 4px;
+}
+
+input {
+  margin: 0 4px 0 2px;
+  padding-left: 8px;
+  flex: 1;
+}
+
+button {
+  height: 40px;
+  width: 70px;
+  background-color: #4468e8;
+  color: white;
+  border: solid 1px #4468e8;
+  cursor: pointer;
+}
+
+.results {
+
+}
+
+article {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+article:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
