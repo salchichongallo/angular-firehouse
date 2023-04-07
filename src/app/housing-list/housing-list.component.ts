@@ -16,8 +16,4 @@ export class HousingListComponent {
   searchHousings(term: string) {
     this.housingService.search(term);
   }
-
-  selectHousingLocation(location: HousingLocation) {
-    this.selectedLocationEvent.emit(location);
-  }
 }

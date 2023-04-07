@@ -3,25 +3,7 @@
     <img src="../assets/logo.svg" alt="Fairhouse" /> <span>Fairhouse</span>
   </header>
   <section>
-    <app-housing-list
-      (selectedLocationEvent)="updateSelectedLocation($event)"
-    ></app-housing-list>
+    <app-housing-list />
   </section>
-
-  <article class="house" *ngIf="!!selectedLocation">
-    <img [src]="selectedLocation.photo" />
-    <h2>{{ selectedLocation.name }}</h2>
-    <ul>
-      <li>{{ selectedLocation.availableUnits }} Units available</li>
-      <li>{{ selectedLocation.city }}, {{ selectedLocation.state }}</li>
-      <li>
-        {{ selectedLocation.wifi ? 'Have Wi-Fi' : 'Does not have Wi-Fi' }}
-      </li>
-      <li>
-        {{
-          selectedLocation.laundry ? 'Have laundry' : 'Does not have laundry'
-        }}
-      </li>
-    </ul>
-  </article>
+  <router-outlet />
 </main>

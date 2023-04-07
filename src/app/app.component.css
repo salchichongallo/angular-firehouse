@@ -19,21 +19,3 @@ main {
   padding: 0 1rem;
   margin: 0 auto;
 }
-
-.house {
-  background: #fff;
-  border-radius: 8px;
-  padding: 1.5rem 2rem;
-  max-width: 396px;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-}
-
-.house img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.house h2 {
-  font-weight: 500;
-}
