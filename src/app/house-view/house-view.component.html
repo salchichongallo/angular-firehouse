@@ -1,5 +1,18 @@
 <main>
-  <a routerLink="/" class="go-back">← Go back</a>
+  <a routerLink="/" class="go-back">
+    <svg
+      height="24"
+      width="24"
+      viewBox="0 96 960 960"
+      aria-hidden="true"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M480 896 160 576l320-320 42 42-248 248h526v60H274l248 248-42 42Z"
+      />
+    </svg>
+    Return
+  </a>
 
   <article *ngIf="house" class="house">
     <img [src]="house.photo" />

@@ -1,11 +1,29 @@
 main {
   max-width: 900px;
-  margin: 2rem auto 4rem auto;
+  margin: 1rem auto 4rem auto;
 }
 
 .go-back {
   margin-bottom: 1.5rem;
-  display: inline-block;
+  display: inline-flex;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-family: 'Urbanist', sans-serif;
+  text-decoration: none;
+  align-items: center;
+  padding: 0.5rem 1rem 0.5rem 0;
+  height: 3rem;
+  border-radius: 0.5rem;
+  color: #4468e8;
+}
+
+.go-back svg {
+  fill: currentColor;
+  color: inherit;
+}
+
+.go-back:hover {
+  text-decoration: underline;
 }
 
 .house {
