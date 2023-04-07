@@ -10,3 +10,11 @@ body {
   box-sizing: border-box;
   background: #f7f7f7;
 }
+
+h1,
+h2,
+h3 {
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
