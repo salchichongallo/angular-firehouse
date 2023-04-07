@@ -1,7 +1,10 @@
 main {
-  display: flex;
-  justify-content: center;
   margin-top: 2rem;
+}
+
+.go-back {
+  margin-bottom: 1rem;
+  display: inline-block;
 }
 
 .house {
