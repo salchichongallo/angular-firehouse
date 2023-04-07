@@ -1,14 +1,16 @@
-<article *ngIf="house" class="house">
-  <img [src]="house.photo" />
-  <h2>{{ house.name }}</h2>
-  <ul>
-    <li>{{ house.availableUnits }} Units available</li>
-    <li>{{ house.city }}, {{ house.state }}</li>
-    <li>
-      {{ house.wifi ? 'Have Wi-Fi' : 'Does not have Wi-Fi' }}
-    </li>
-    <li>
-      {{ house.laundry ? 'Have laundry' : 'Does not have laundry' }}
-    </li>
-  </ul>
-</article>
+<main>
+  <article *ngIf="house" class="house">
+    <img [src]="house.photo" />
+    <h1>{{ house.name }}</h1>
+    <ul>
+      <li>{{ house.availableUnits }} Units available</li>
+      <li>{{ house.city }}, {{ house.state }}</li>
+      <li>
+        {{ house.wifi ? 'Have Wi-Fi' : 'Does not have Wi-Fi' }}
+      </li>
+      <li>
+        {{ house.laundry ? 'Have laundry' : 'Does not have laundry' }}
+      </li>
+    </ul>
+  </article>
+</main>

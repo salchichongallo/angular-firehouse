@@ -1,10 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HouseViewComponent } from '../house-view/house-view.component';
+import { HousingListComponent } from '../housing-list/housing-list.component';
 
 const routes: Routes = [
   {
-    path: 'search/:houseSlug',
+    path: '',
+    component: HousingListComponent,
+  },
+  {
+    path: ':houseCode',
     component: HouseViewComponent,
   },
 ];

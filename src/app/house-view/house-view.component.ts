@@ -19,8 +19,8 @@ export class HouseViewComponent implements OnInit {
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
-      const slug = params.get('houseSlug');
-      this.house = this.housing.getBySlug(slug!);
+      const code = params.get('houseCode');
+      this.house = this.housing.getBySlug(code!);
     });
   }
 }
