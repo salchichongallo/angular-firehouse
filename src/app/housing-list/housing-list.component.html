@@ -6,7 +6,13 @@
   </div>
 </div>
 
-<article *ngFor="let location of locations">
-  <p>{{ location.name }}</p>
-  <a [routerLink]="location.slug">View</a>
-</article>
+<section class="articles">
+  <ng-container *ngFor="let location of locations">
+    <a [routerLink]="location.slug" class="article__link-wrapper">
+      <article class="article">
+        <img [src]="location.photo" class="article__image" />
+        <h2 class="article__title">{{ location.name }}</h2>
+      </article>
+    </a>
+  </ng-container>
+</section>

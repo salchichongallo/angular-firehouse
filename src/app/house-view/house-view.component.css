@@ -1,17 +1,15 @@
 main {
-  margin-top: 2rem;
+  max-width: 900px;
+  margin: 2rem auto 4rem auto;
 }
 
 .go-back {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   display: inline-block;
 }
 
 .house {
-  background: #fff;
   border-radius: 8px;
-  padding: 1.5rem 2rem;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
   width: 100%;
 }
 
