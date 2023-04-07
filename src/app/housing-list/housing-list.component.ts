@@ -1,31 +1,20 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { HousingLocation } from '../housing-location';
+import { SearchHousingService } from '../search-housing.service';
 
 @Component({
   selector: 'app-housing-list',
   templateUrl: './housing-list.component.html',
   styleUrls: ['./housing-list.component.css'],
 })
-export class HousingListComponent implements OnInit {
-  @Input() locationList: HousingLocation[] = [];
-
-  results: HousingLocation[] = [];
-
+export class HousingListComponent {
   @Output()
   selectedLocationEvent = new EventEmitter<HousingLocation>();
 
-  ngOnInit() {
-    this.results = this.locationList.slice();
-  }
+  constructor(public housingService: SearchHousingService) {}
 
-  searchHousingLocations(term: string) {
-    const byCity = this.makeCityFilter(term.toLowerCase());
-    this.results = this.locationList.filter(byCity);
-  }
-
-  private makeCityFilter(term: string) {
-    return (location: HousingLocation) =>
-      location.city.toLowerCase().includes(term);
+  searchHousings(term: string) {
+    this.housingService.search(term);
   }
 
   selectHousingLocation(location: HousingLocation) {

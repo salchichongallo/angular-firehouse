@@ -3,11 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HousingListComponent } from './housing-list/housing-list.component';
+import { SearchHousingService } from './search-housing.service';
 
 @NgModule({
   declarations: [AppComponent, HousingListComponent],
   imports: [BrowserModule],
-  providers: [],
+  providers: [SearchHousingService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

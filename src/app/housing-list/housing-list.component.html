@@ -2,13 +2,11 @@
   <label for="location-search">Search for a new place</label>
   <div class="search-bar__input">
     <input #term id="location-search" placeholder="Ex: Chicago" />
-    <button (click)="searchHousingLocations(term.value)" type="button">
-      Search
-    </button>
+    <button (click)="searchHousings(term.value)" type="button">Search</button>
   </div>
 </div>
 
-<article *ngFor="let location of results">
+<article *ngFor="let location of housingService.locations">
   <p>{{ location.name }}</p>
   <button (click)="selectHousingLocation(location)" type="button">View</button>
 </article>
