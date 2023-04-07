@@ -24,6 +24,8 @@
   </div>
 </div>
 
+<p class="search-results-count">{{ locationsCountLabel }}</p>
+
 <section class="articles">
   <ng-container *ngFor="let location of locations">
     <a [routerLink]="location.slug" class="article__link-wrapper">

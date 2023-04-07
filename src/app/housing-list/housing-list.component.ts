@@ -13,6 +13,8 @@ export class HousingListComponent implements OnInit {
 
   locations: HousingLocation[] = [];
 
+  locationsCountLabel: string = '';
+
   constructor(public housingService: SearchHousingService) {}
 
   ngOnInit() {
@@ -21,5 +23,20 @@ export class HousingListComponent implements OnInit {
 
   searchHousings(term: string) {
     this.locations = this.housingService.search(term);
+    this.countLocations();
+  }
+
+  private countLocations() {
+    const count = this.locations.length;
+    const areMultiple = count > 1;
+    const isOne = count === 1;
+
+    if (areMultiple) {
+      this.locationsCountLabel = `${count} locations found:`;
+    } else if (isOne) {
+      this.locationsCountLabel = '1 location found:';
+    } else {
+      this.locationsCountLabel = 'No locations found.';
+    }
   }
 }

@@ -94,3 +94,7 @@ input {
   font-size: 1.5rem;
   margin: 0.5rem 0 0 0;
 }
+
+.search-results-count {
+  font-size: 14px;
+}
