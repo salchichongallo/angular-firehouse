@@ -6,7 +6,7 @@
   </div>
 </div>
 
-<article *ngFor="let location of housingService.locations">
+<article *ngFor="let location of locations">
   <p>{{ location.name }}</p>
   <a [routerLink]="['/search', location.slug]">View</a>
 </article>

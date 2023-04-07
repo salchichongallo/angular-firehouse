@@ -38,15 +38,9 @@ export class SearchHousingService {
     },
   ];
 
-  locations: HousingLocation[] = [];
-
-  constructor() {
-    this.locations = SearchHousingService.ALL_LOCATIONS.slice();
-  }
-
-  search(term: string) {
+  search(term: string): HousingLocation[] {
     const byCity = this.makeCityFilter(term.toLowerCase());
-    this.locations = SearchHousingService.ALL_LOCATIONS.filter(byCity);
+    return SearchHousingService.ALL_LOCATIONS.filter(byCity);
   }
 
   private makeCityFilter(term: string) {

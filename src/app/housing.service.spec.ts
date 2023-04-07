@@ -14,14 +14,10 @@ describe('HousingService', () => {
     expect(housing).toBeTruthy();
   });
 
-  it('should have initial locations', () => {
-    expect(housing.locations.length).toBeGreaterThan(0);
-  });
-
   it('searches by city', () => {
     const term = 'chicago';
-    housing.search(term);
-    housing.locations.forEach(location =>
+    const locations = housing.search(term);
+    locations.forEach(location =>
       expect(location.city.toLowerCase()).toContain(term),
     );
   });
