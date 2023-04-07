@@ -16,7 +16,7 @@ main {
 .house img {
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 1.5rem;
 }
 
 .house h1 {

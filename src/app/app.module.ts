@@ -9,7 +9,12 @@ import { HousingListComponent } from './housing-list/housing-list.component';
 import { HeaderComponent } from './header/header.component';
 
 @NgModule({
-  declarations: [AppComponent, HousingListComponent, HouseViewComponent, HeaderComponent],
+  declarations: [
+    AppComponent,
+    HousingListComponent,
+    HouseViewComponent,
+    HeaderComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [SearchHousingService],
   bootstrap: [AppComponent],
